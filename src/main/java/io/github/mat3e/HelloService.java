@@ -18,9 +18,7 @@ class HelloService {
     }
 
 
-    String prepareGreeeting(String name) {
-     return   prepareGreeeting(name, null);
-    }
+
     String prepareGreeeting(String name, String lang){
         var langId = Optional.ofNullable(lang).map(Long::valueOf).orElse(FALLBACK_LANG.getId());
         var welcomeMsg = repository.findById(langId).orElse(FALLBACK_LANG).getWelcomeMsg();

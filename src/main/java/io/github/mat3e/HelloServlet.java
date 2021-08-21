@@ -37,11 +37,6 @@ public class HelloServlet extends HttpServlet {
         var name = req.getParameter(NAME_PARAM);
         var lang = req.getParameter(LANG_PARAM);
         resp.getWriter().write(service.prepareGreeeting(name, lang));
-
-
     }
-
-
-
 
 }
